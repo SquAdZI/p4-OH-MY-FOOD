@@ -1,0 +1,104 @@
+/********************Réservez le menu qui vous convients********************/
+.reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6;
+  
+    .reservation-title {
+      @include reservation-title;
+      margin: 40px 50px 10px 50px;
+      color: $fond-black;
+    }
+
+ p {
+    color: #353535;
+    @include choix-title;
+  }
+}
+
+/********************Fonctionnement/********************/
+
+.functionning {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 50px 20px;
+  gap: 30px;
+}
+
+.functionning-choose {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24.92px;
+
+  @media screen and (min-width :1400px) {
+    flex-direction: row;
+  }
+
+  @media screen and (min-width:768px) {
+    flex-direction: row;
+
+  }
+
+  .choose {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: #f6f6f6;
+    border-radius: 20px;
+    height: 72.38px;
+    width: 98%;
+    align-items: center;
+    margin-left: 10px;
+    box-shadow: 0px 4px 15px 0px #00000026;
+  }
+
+  .icon-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline-end: 20px;
+    gap: 30px;
+
+    @media screen and (min-width:1400px) {
+      width: 70%;
+
+    }
+
+    @media screen and (min-width:768px) {
+      width: 70%;
+
+    }
+
+    i {
+      font-size: 20px;
+      color: #7e7e7e;
+    }
+
+    p {
+      @include function-choice;
+      color: $fond-black;
+    }
+
+    .fa-store {
+      color: #9356dc;
+    }
+  }
+  .number-radius {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $background-number;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    left: -10px;
+    color: #ffffff;
+    @include function-number;
+  }
+}
