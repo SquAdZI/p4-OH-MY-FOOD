@@ -1,3 +1,10 @@
+@mixin header-flex-title{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 63px;
+}
+
 @mixin txt-shrikhand {
     font-family: "Shrikhand", sans-serif;
     font-size: 28px;
@@ -7,11 +14,25 @@
     text-align: left;
 }
 
+@mixin location{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
 @mixin reservation-title{
     font-size: 24px;
     font-weight: 700;
     line-height: 28.13px;
     text-align:center;
+}
+
+@mixin button{
+    list-style: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: center;
 }
 
 @mixin choix-title{
@@ -29,7 +50,6 @@
 }
 
 @mixin function-choice{
-    font-family: 'Roboto';
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
@@ -37,9 +57,52 @@
 }
 
 @mixin function-number{
-    font-family: 'Roboto';
     font-size: 14.18px;
     font-weight: 500;
     line-height: 16.62px;
+    text-align: left;
+}
+
+@mixin btn-new{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+    text-align: center;
+}
+
+@mixin card-title{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.09px;
+    text-align: left;
+}
+
+@mixin localité-text{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 19.92px;
+    text-align: left;
+}
+
+@mixin logo-footer{
+    font-family: 'Shrikhand';
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 26.24px;
+    text-align: left;
+}
+
+@mixin icon-footer{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+}
+
+@mixin text-footer{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
     text-align: left;
 }

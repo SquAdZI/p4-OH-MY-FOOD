@@ -1,0 +1,77 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-footer;
+    padding-left: 25px;
+    gap: 7px;
+    height: 186px;
+  
+    @media (min-width:1024px) {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: flex-start;
+      height: 114px;
+      padding-right: 40px;
+    }
+    
+    .logo-footer{
+      display: flex;
+      margin-bottom: 10px;
+      @media (min-width:1024px) {
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+          margin-top: 20px;
+          margin-right: 25px;
+          
+        }
+    & h2 {
+        margin-top: 22px;
+        @include logo-footer;
+        color: #ffffff;
+      }
+    }
+  
+    .infos-container{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-right: 50px;
+      @media screen and (min-width:1024px) {
+        flex-direction: row;
+      }
+    }
+
+    .link-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: #ffffff;
+        
+        @media (min-width:1024px) {
+          flex-direction: row;
+          margin-right: 25px;
+          margin-top: 40px;
+          gap: 25px;
+        }
+    }
+      
+    .footer-icon {
+        display: flex;
+        gap: 10px;
+        color: #ffffff;
+        @include icon-footer;
+    }
+      
+    i {
+        width: 20px;
+    }
+      
+    .text-footer {
+        @include text-footer;
+        color: #ffffff;
+        @media screen and (min-width:1024px){
+          margin-top: 40px;
+        }
+    }
+}
