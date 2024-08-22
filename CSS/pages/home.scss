@@ -55,6 +55,10 @@
   align-items: flex-start;
   margin: 50px 20px;
   gap: 30px;
+
+  @media screen and (min-width :1400px) {
+    margin: 50px 180px;
+  }
 }
 
 .functionning-choose {
@@ -71,6 +75,10 @@
   width: 98%;
   align-items: center;
   margin-left: 10px;
+
+  .fa-store {
+    color: #9356dc;
+  }
 }
 
 ol {
@@ -109,13 +117,16 @@ ol li {
 
 .item {
   display: flex;
-  gap:27px;
-  margin-left:33px;
+  justify-content: center;
+  height: 72.38px;
+  width: 98%;
+  margin-left: 10px;
+  gap: 30px;
 }
 
 @media screen and (max-width: 768px) {
   ol {
-      flex-direction: column;
+      flex-direction: row;
   }
 }
 
@@ -124,7 +135,7 @@ ol li {
 .restaurants-container {
   display: flex;
   flex-direction: column;
-  margin: 75px 0px;
+  margin: 75px 0px 0px;
   background-color: #f6f6f6;
 
   .section-title {

@@ -15,3 +15,49 @@
       }
     }
 }
+
+/**********RESTAURANT**********/
+
+/**********.restaurant-header {
+  background-color: #ffffff;
+
+  .direction-left {
+    position: relative;
+    top: 25px;
+    left: 6px;
+    font-size: 25px;
+    color: black;
+  }
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}**********/
+
+.restaurant-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+
+  @media screen and (min-width:1400px) {
+    height: 96.34px;
+
+  }
+
+  .header-title {
+    @include header-flex-title;
+  }
+}
+
+.fa-arrow-left {
+  position: absolute;
+  top: 25%;
+  left: 20px;
+  font-size: 25px;
+  color: $fond-black;
+}
