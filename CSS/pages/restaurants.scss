@@ -1,0 +1,136 @@
+.img-menu {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -40px;
+
+    img {
+        object-fit: cover;
+        height: 275px;
+        width: 100%;
+
+        @media screen and (min-width:1400px) {
+            height: 383px;
+        }
+    }
+}
+
+/**********ENTRÉES**********/
+
+.menu-container {
+    position: relative;
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    border-radius: 40px 40px 0px 0px;
+    width: 100%;
+
+    @media (min-width:768px) {
+        margin-left: 150px;
+        margin-right: 150px;
+        width: auto;
+
+    }
+
+    .title {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        gap: 35px;
+        align-items: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+        @media (min-width:768px) {
+            justify-content: center;
+            gap: 70px;
+
+        }
+
+        @import "../components/animation-title-heart";
+    }
+
+    .menu-title {
+        @include menu-title;
+        margin-left: 10px;
+    }
+
+    .choose-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 13px;
+        margin-right: 13px;
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+    
+    .card-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 69px;
+        background: #ffffff;
+        width: 100%;
+        box-shadow: 0px 4.01px 15.04px 0px #0000001a;
+        border-radius: 15px 15px 15px 15px;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:active {
+            .card-button {
+                width: 59px;
+            }
+
+            .card {
+                width: 60%;
+            }
+
+            .card-description {
+                width: 99%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            .card-title {
+                width: 99%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+
+        @media screen and (min-width:1400px) {
+            &:hover {
+                .card-button {
+                width: 59px;
+                }
+
+                .card {
+                    width: 60%;
+                }
+
+                .card-description {
+                    width: 99%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+
+                .card-title {
+                    width: 99%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}
+
+hr{
+    border: 0;
+    border-top: 2px solid #99e2d0;
+    width: 40px;
+}

@@ -1,0 +1,32 @@
+.title-heart {
+    display: flex;
+    align-items: center;
+    position: relative;
+  
+  
+    .fa-full {
+      position: absolute;
+      font-size: 25px;
+      right: 10px;
+      color: transparent;
+      background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      opacity: 0;
+      transition: all 2000ms ease;
+    }
+  
+    &:active .fa-solid {
+      opacity: 1;
+    }
+  
+    &:hover .fa-solid {
+      opacity: 1;
+    }
+  
+    .fa-empty {
+      position: absolute;
+      font-size: 25px;
+      right: 10px;
+    }
+}
