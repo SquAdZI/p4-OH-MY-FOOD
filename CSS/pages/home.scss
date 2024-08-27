@@ -75,10 +75,16 @@
 
 .choose {
   display: flex;
+  flex-direction: column;
   border-radius: 20px;
   width: 98%;
   align-items: center;
   margin-left: 10px;
+
+  .fa-mobile-alt,
+  .fa-list-ul {
+    color: #7E7E7E;
+  }
 
   .fa-store {
     color: #9356dc;
@@ -125,10 +131,8 @@ ol li {
 
 .item {
   display: flex;
-  justify-content: center;
   height: 72.38px;
-  width: 98%;
-  margin-left: 10px;
+  margin-left: 34px;
   gap: 30px;
 }
 

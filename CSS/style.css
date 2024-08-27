@@ -613,10 +613,15 @@ template {
 
 .choose {
   display: flex;
+  flex-direction: column;
   border-radius: 20px;
   width: 98%;
   align-items: center;
   margin-left: 10px;
+}
+.choose .fa-mobile-alt,
+.choose .fa-list-ul {
+  color: #7E7E7E;
 }
 .choose .fa-store {
   color: #9356dc;
@@ -663,10 +668,8 @@ ol li {
 
 .item {
   display: flex;
-  justify-content: center;
   height: 72.38px;
-  width: 98%;
-  margin-left: 10px;
+  margin-left: 34px;
   gap: 30px;
 }
 
@@ -840,6 +843,13 @@ ol li {
 }
 
 /**********ENTRÉES**********/
+hr {
+  border: 0;
+  border-top: 3px solid #99e2d0;
+  width: 40px;
+  margin: 5px 0px 12px;
+}
+
 .menu-container {
   position: relative;
   display: flex;
@@ -862,8 +872,8 @@ ol li {
   justify-content: space-around;
   gap: 35px;
   align-items: center;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 @media (min-width: 768px) {
   .menu-container .title {
@@ -908,6 +918,13 @@ ol li {
   margin-left: 10px;
 }
 .menu-container .choose-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 13px;
+  margin-right: 13px;
+  margin-bottom: 30px;
+}
+.menu-container .card-flex {
   display: flex;
   flex-direction: column;
   margin-left: 13px;
@@ -965,11 +982,42 @@ ol li {
     text-overflow: ellipsis;
   }
 }
-
-hr {
-  border: 0;
-  border-top: 2px solid #99e2d0;
+.menu-container .card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 10px;
+}
+.menu-container .price {
+  font-size: 15.04px;
+  font-weight: 700;
+}
+.menu-container .card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0px;
+  background-color: #99e2d0;
+  border-radius: 0px 15px 15px 0px;
+  transition: all 0.8s;
+}
+.menu-container .card-button i {
+  font-size: 20px;
+  color: #ffffff;
+}
+.menu-container .choose-title {
   width: 40px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18.75px;
+  text-align: left;
+}
+.menu-container .card-description {
+  font-size: 15.04px;
+  font-weight: 300;
+  line-height: 17.63px;
+  text-align: left;
 }
 
 .title-heart {

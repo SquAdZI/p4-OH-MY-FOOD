@@ -130,3 +130,15 @@
     line-height: 18.75px;
     text-align: left;
 }
+
+@mixin price{
+    font-size: 15.04px;
+    font-weight: 700;
+}
+
+@mixin plat-description{
+    font-size: 15.04px;
+    font-weight: 300;
+    line-height: 17.63px;
+    text-align: left;
+}

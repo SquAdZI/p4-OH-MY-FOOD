@@ -17,6 +17,13 @@
 
 /**********ENTRÉES**********/
 
+hr{
+    border: 0;
+    border-top: 3px solid #99e2d0;
+    width: 40px;
+    margin: 5px 0px 12px
+}
+
 .menu-container {
     position: relative;
     display: flex;
@@ -39,8 +46,8 @@
         justify-content: space-around;
         gap: 35px;
         align-items: center;
-        margin-top: 25px;
-        margin-bottom: 25px;
+        margin-top: 6px;
+        margin-bottom: 6px;
 
         @media (min-width:768px) {
             justify-content: center;
@@ -57,6 +64,14 @@
     }
 
     .choose-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 13px;
+        margin-right: 13px;
+        margin-bottom: 30px;
+    }
+
+    .card-flex {
         display: flex;
         flex-direction: column;
         margin-left: 13px;
@@ -127,10 +142,41 @@
             }
         }
     }
-}
 
-hr{
-    border: 0;
-    border-top: 2px solid #99e2d0;
-    width: 40px;
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-left: 10px;
+
+    }
+
+    .price {
+        @include price;
+    }
+
+    .card-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 0px;
+        background-color: $background-whitegreen;
+        border-radius: 0px 15px 15px 0px;
+        transition: all 0.8s;
+    }
+
+    .card-button i {
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+    .choose-title {
+        width: 40px;
+        @include menu-name;
+    }
+
+    .card-description {
+        @include plat-description;
+    }
 }
