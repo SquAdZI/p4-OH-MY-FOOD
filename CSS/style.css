@@ -847,7 +847,7 @@ hr {
   border: 0;
   border-top: 3px solid #99e2d0;
   width: 40px;
-  margin: 5px 0px 12px;
+  margin: 5px 0px 12px 13px;
 }
 
 .menu-container {
@@ -920,8 +920,6 @@ hr {
 .menu-container .choose-container {
   display: flex;
   flex-direction: column;
-  margin-left: 13px;
-  margin-right: 13px;
   margin-bottom: 30px;
 }
 .menu-container .card-flex {
@@ -1008,6 +1006,7 @@ hr {
 }
 .menu-container .choose-title {
   width: 40px;
+  margin-left: 13px;
   font-size: 16px;
   font-weight: 300;
   line-height: 18.75px;
