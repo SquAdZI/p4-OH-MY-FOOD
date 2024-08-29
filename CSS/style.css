@@ -393,6 +393,29 @@ template {
   transition: all 0.5s ease-out;
 }
 
+.commander-btn {
+  height: 50px;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  border: none;
+  color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  padding: 15px 50px 0px 50px;
+  margin: 10px;
+  transition: all 0.5s ease-in;
+}
+
+.commander-btn:hover {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+  opacity: 0.8;
+  transition: all 0.5s ease-out;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -1017,6 +1040,13 @@ hr {
   font-weight: 300;
   line-height: 17.63px;
   text-align: left;
+}
+
+.commander-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .title-heart {

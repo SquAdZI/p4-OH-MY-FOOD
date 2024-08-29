@@ -179,3 +179,10 @@ hr{
         @include plat-description;
     }
 }
+
+.commander-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
