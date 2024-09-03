@@ -966,10 +966,10 @@ hr {
   cursor: pointer;
 }
 .menu-container .card-container:active .card-button {
-  width: 59px;
+  width: 60px;
 }
 .menu-container .card-container:active .card {
-  width: 60%;
+  width: 100%;
 }
 .menu-container .card-container:active .card-description {
   width: 99%;
@@ -985,10 +985,10 @@ hr {
 }
 @media screen and (min-width: 1400px) {
   .menu-container .card-container:hover .card-button {
-    width: 59px;
+    width: 60px;
   }
   .menu-container .card-container:hover .card {
-    width: 60%;
+    width: 100%;
   }
   .menu-container .card-container:hover .card-description {
     width: 99%;
@@ -1008,10 +1008,12 @@ hr {
   flex-direction: column;
   gap: 5px;
   margin-left: 10px;
+  width: 100%;
 }
 .menu-container .price {
   font-size: 15.04px;
   font-weight: 700;
+  margin-right: 10px;
 }
 .menu-container .card-button {
   display: flex;
@@ -1036,6 +1038,8 @@ hr {
   text-align: left;
 }
 .menu-container .card-description {
+  display: flex;
+  justify-content: space-between;
   font-size: 15.04px;
   font-weight: 300;
   line-height: 17.63px;
