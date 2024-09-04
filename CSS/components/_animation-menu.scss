@@ -1,0 +1,23 @@
+#choose-container-1 {
+    display: flex;
+    flex-direction: column;
+    animation: choose-1 3s ease-in-out;
+    animation-fill-mode: backwards;
+
+    @media (min-width:1400px) {
+        margin-left: 210px;
+        margin-right: 210px;
+    }
+}
+
+@keyframes choose-1 {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0px, 0%);
+        scale: 1;
+        opacity: 1;
+    }
+}

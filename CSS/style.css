@@ -320,6 +320,30 @@ template {
   font-family: "Roboto";
 }
 
+#choose-container-1 {
+  display: flex;
+  flex-direction: column;
+  animation: choose-1 3s ease-in-out;
+  animation-fill-mode: backwards;
+}
+@media (min-width: 1400px) {
+  #choose-container-1 {
+    margin-left: 210px;
+    margin-right: 210px;
+  }
+}
+
+@keyframes choose-1 {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0%);
+    scale: 1;
+    opacity: 1;
+  }
+}
 .card-heart {
   display: flex;
   position: absolute;
@@ -352,6 +376,34 @@ template {
   position: absolute;
   font-size: 25px;
   margin-right: 10px;
+  right: 10px;
+}
+
+.title-heart {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.title-heart .fa-full {
+  position: absolute;
+  font-size: 25px;
+  right: 10px;
+  color: transparent;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 2000ms ease;
+}
+.title-heart:active .fa-solid {
+  opacity: 1;
+}
+.title-heart:hover .fa-solid {
+  opacity: 1;
+}
+.title-heart .fa-empty {
+  position: absolute;
+  font-size: 25px;
   right: 10px;
 }
 
@@ -532,6 +584,7 @@ template {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
   background-color: #ffffff;
 }
 @media screen and (min-width: 1400px) {
@@ -943,7 +996,6 @@ hr {
 .menu-container .choose-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
 }
 .menu-container .card-flex {
   display: flex;
@@ -1013,7 +1065,6 @@ hr {
 .menu-container .price {
   font-size: 15.04px;
   font-weight: 700;
-  margin-right: 10px;
 }
 .menu-container .card-button {
   display: flex;
@@ -1021,6 +1072,7 @@ hr {
   justify-content: center;
   height: 100%;
   width: 0px;
+  margin-left: 8px;
   background-color: #99e2d0;
   border-radius: 0px 15px 15px 0px;
   transition: all 0.8s;
@@ -1051,34 +1103,6 @@ hr {
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
-}
-
-.title-heart {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.title-heart .fa-full {
-  position: absolute;
-  font-size: 25px;
-  right: 10px;
-  color: transparent;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 2000ms ease;
-}
-.title-heart:active .fa-solid {
-  opacity: 1;
-}
-.title-heart:hover .fa-solid {
-  opacity: 1;
-}
-.title-heart .fa-empty {
-  position: absolute;
-  font-size: 25px;
-  right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
