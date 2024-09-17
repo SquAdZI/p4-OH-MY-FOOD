@@ -66,6 +66,11 @@ hr{
     .choose-container {
         display: flex;
         flex-direction: column;
+
+        @media (min-width:1400px) {
+            margin-left: 210px;
+            margin-right: 210px;
+        }
     }
 
     .card-flex {
@@ -85,7 +90,7 @@ hr{
         background: #ffffff;
         width: 100%;
         box-shadow: 0px 4.01px 15.04px 0px #0000001a;
-        border-radius: 15px 15px 15px 15px;
+        border-radius: 15px 15px;
         overflow: hidden;
         cursor: pointer;
 

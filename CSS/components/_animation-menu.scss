@@ -1,16 +1,26 @@
-#choose-container-1 {
+.fade-1,
+.fade-2,
+.fade-3 {
     display: flex;
     flex-direction: column;
-    animation: choose-1 3s ease-in-out;
     animation-fill-mode: backwards;
-
-    @media (min-width:1400px) {
-        margin-left: 210px;
-        margin-right: 210px;
-    }
+    opacity: 0;
+}
+.fade-1 {
+    animation: fade 1s ease-in-out forwards;
 }
 
-@keyframes choose-1 {
+.fade-2 {
+    animation: fade 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.fade-3 {
+    animation: fade 1s ease-in-out forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fade {
     0% {
         transform: translate(0px, 0px);
         opacity: 0;

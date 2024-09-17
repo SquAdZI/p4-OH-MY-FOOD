@@ -320,20 +320,30 @@ template {
   font-family: "Roboto";
 }
 
-#choose-container-1 {
+.fade-1,
+.fade-2,
+.fade-3 {
   display: flex;
   flex-direction: column;
-  animation: choose-1 3s ease-in-out;
   animation-fill-mode: backwards;
-}
-@media (min-width: 1400px) {
-  #choose-container-1 {
-    margin-left: 210px;
-    margin-right: 210px;
-  }
+  opacity: 0;
 }
 
-@keyframes choose-1 {
+.fade-1 {
+  animation: fade 1s ease-in-out forwards;
+}
+
+.fade-2 {
+  animation: fade 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.fade-3 {
+  animation: fade 1s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fade {
   0% {
     transform: translate(0px, 0px);
     opacity: 0;
@@ -997,6 +1007,12 @@ hr {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 1400px) {
+  .menu-container .choose-container {
+    margin-left: 210px;
+    margin-right: 210px;
+  }
+}
 .menu-container .card-flex {
   display: flex;
   flex-direction: column;
@@ -1013,7 +1029,7 @@ hr {
   background: #ffffff;
   width: 100%;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 15px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -1103,6 +1119,61 @@ hr {
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
+}
+
+.loadingscreen {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background: white;
+  animation: loader 4s ease-in-out forwards;
+}
+
+.loader {
+  width: 80px;
+  aspect-ratio: 1;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%) bottom/100% 0% no-repeat #ccc;
+  -webkit-mask: radial-gradient(circle at 60% 65%, #000 62%, rgba(0, 0, 0, 0) 65%) top left, radial-gradient(circle at 40% 65%, #000 62%, rgba(0, 0, 0, 0) 65%) top right, linear-gradient(to bottom left, #000 42%, rgba(0, 0, 0, 0) 43%) bottom left, linear-gradient(to bottom right, #000 42%, rgba(0, 0, 0, 0) 43%) bottom right;
+  -webkit-mask-size: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  animation: l19 3.5s ease-in-out;
+}
+
+@keyframes l19 {
+  90%, 100% {
+    background-size: 100% 100%;
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+  70% {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+  99% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  100% {
+    z-index: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
