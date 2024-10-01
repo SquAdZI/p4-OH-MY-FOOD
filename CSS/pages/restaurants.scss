@@ -15,8 +15,6 @@
     }
 }
 
-/**********ENTRÉES**********/
-
 hr{
     border: 0;
     border-top: 3px solid #99e2d0;
@@ -52,7 +50,6 @@ hr{
         @media (min-width:768px) {
             justify-content: center;
             gap: 70px;
-
         }
 
         @import "../components/animation-title-heart";
@@ -66,14 +63,9 @@ hr{
     .choose-container {
         display: flex;
         flex-direction: column;
-
-        @media (min-width:1400px) {
-            margin-left: 210px;
-            margin-right: 210px;
-        }
     }
 
-    .card-flex {
+    .card-element {
         display: flex;
         flex-direction: column;
         margin-left: 13px;
@@ -81,7 +73,7 @@ hr{
         gap: 12px;
         margin-bottom: 30px;
     }
-    
+
     .card-container {
         display: flex;
         justify-content: space-between;
@@ -90,17 +82,17 @@ hr{
         background: #ffffff;
         width: 100%;
         box-shadow: 0px 4.01px 15.04px 0px #0000001a;
-        border-radius: 15px 15px;
+        border-radius: 15px 15px 15px 15px;
         overflow: hidden;
         cursor: pointer;
 
         &:active {
             .card-button {
-                width: 60px;
+                width: 59px;
             }
 
             .card {
-                width: 100%;
+                width: 60%;
             }
 
             .card-description {
@@ -121,27 +113,29 @@ hr{
         @media screen and (min-width:1400px) {
             &:hover {
                 .card-button {
-                width: 60px;
+                    width: 60px;
                 }
 
                 .card {
-                    width: 100%;
+                    width: 60%;
                 }
 
                 .card-description {
-                    width: 99%;
+                    width: 100%;
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                 }
 
                 .card-title {
-                    width: 99%;
+                    width: 100%;
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                 }
+
             }
+
         }
     }
 
@@ -150,11 +144,18 @@ hr{
         flex-direction: column;
         gap: 5px;
         margin-left: 10px;
-        width: 100%
+
     }
 
     .price {
+        display: flex;
+        height: 100%;
+        gap: 15px;
         @include price;
+    }
+
+    .price p {
+        margin-top: 40px;
     }
 
     .card-button {
@@ -163,7 +164,6 @@ hr{
         justify-content: center;
         height: 100%;
         width: 0px;
-        margin-left: 8px;
         background-color: $background-whitegreen;
         border-radius: 0px 15px 15px 0px;
         transition: all 0.8s;
@@ -173,6 +173,7 @@ hr{
         font-size: 20px;
         color: #ffffff;
     }
+
 
     .choose-title {
         width: 40px;

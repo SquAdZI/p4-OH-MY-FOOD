@@ -134,6 +134,8 @@
 @mixin price{
     font-size: 15.04px;
     font-weight: 700;
+    line-height: 17.63px;
+    text-align: center;
 }
 
 @mixin plat-description{
