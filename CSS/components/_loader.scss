@@ -6,7 +6,7 @@
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 1000;
+    z-index: 999;
     background: white;
     animation: loader 4s ease-in-out forwards;
 }
@@ -26,32 +26,24 @@
 }
 
 @keyframes l19 {
-    90%,100% {background-size:100% 100%}
+    100% {background-size:100% 100%}
 }
 
 @keyframes loader {
     0% {
-        opacity: 0;
+        opacity: 1;
     }
     25% {
         opacity: 1;
-        width: 100%;
-        height: 100%;
     }
     70% {
         opacity: 1;
-        width: 100%;
-        height: 100%;
     }
     99% {
         opacity: 0;
-        width: 0;
-        height: 0;
     }
     100% {
         z-index: 0;
         opacity: 0;
-        width: 0;
-        height: 0;
     }
 }

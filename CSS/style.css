@@ -320,6 +320,10 @@ template {
   font-family: "Roboto";
 }
 
+h3 {
+  font-size: 18px;
+}
+
 .fade-1,
 .fade-2,
 .fade-3 {
@@ -932,7 +936,7 @@ hr {
   border: 0;
   border-top: 3px solid #99e2d0;
   width: 40px;
-  margin: 5px 0px 12px 13px;
+  margin: 5px 0px 0px 13px;
 }
 
 .menu-container {
@@ -954,11 +958,10 @@ hr {
 .menu-container .title {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 35px;
   align-items: center;
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin: 31px 17px 0;
 }
 @media (min-width: 768px) {
   .menu-container .title {
@@ -1000,117 +1003,96 @@ hr {
   font-weight: 400;
   line-height: 40.82px;
   text-align: left;
-  margin-left: 10px;
 }
 .menu-container .choose-container {
   display: flex;
   flex-direction: column;
 }
-.menu-container .card-element {
-  display: flex;
-  flex-direction: column;
-  margin-left: 13px;
-  margin-right: 13px;
-  gap: 12px;
-  margin-bottom: 30px;
-}
-.menu-container .card-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 69px;
-  background: #ffffff;
-  width: 100%;
-  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
-  border-radius: 15px 15px 15px 15px;
-  overflow: hidden;
-  cursor: pointer;
-}
-.menu-container .card-container:active .card-button {
-  width: 59px;
-}
-.menu-container .card-container:active .card {
-  width: 60%;
-}
-.menu-container .card-container:active .card-description {
-  width: 99%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.menu-container .card-container:active .card-title {
-  width: 99%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-@media screen and (min-width: 1400px) {
-  .menu-container .card-container:hover .card-button {
-    width: 60px;
-  }
-  .menu-container .card-container:hover .card {
-    width: 60%;
-  }
-  .menu-container .card-container:hover .card-description {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .menu-container .card-container:hover .card-title {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-}
-.menu-container .card {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-left: 10px;
-}
-.menu-container .price {
-  display: flex;
-  height: 100%;
-  gap: 15px;
-  font-size: 15.04px;
-  font-weight: 700;
-  line-height: 17.63px;
-  text-align: center;
-}
-.menu-container .price p {
-  margin-top: 40px;
-}
-.menu-container .card-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 0px;
-  background-color: #99e2d0;
-  border-radius: 0px 15px 15px 0px;
-  transition: all 0.8s;
-}
-.menu-container .card-button i {
-  font-size: 20px;
-  color: #ffffff;
-}
 .menu-container .choose-title {
   width: 40px;
   margin-left: 13px;
+  margin-top: 40px;
   font-size: 16px;
   font-weight: 300;
   line-height: 18.75px;
   text-align: left;
 }
-.menu-container .card-description {
+.menu-container .card-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.menu-container .card-element {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  margin: 10px 13px;
+  border-radius: 15px;
+  padding: 10px;
+  width: auto;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px #CCC;
+}
+.menu-container .card-element .description,
+.menu-container .card-element h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-container .card-element:hover .card,
+.menu-container .card-element:hover .price {
+  padding-right: 35px;
+  transition: all 450ms ease-in-out;
+}
+.menu-container .card-element:hover .card-btn {
+  transform: translate(-70px);
+}
+.menu-container .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 450ms ease-in-out;
+}
+.menu-container .card h3 {
+  margin: 0 35px 5px 0;
+}
+.menu-container h1,
+.menu-container h2,
+.menu-container h3,
+.menu-container p {
+  margin: 0;
+}
+.menu-container .card-description-price {
   display: flex;
   justify-content: space-between;
   font-size: 15.04px;
   font-weight: 300;
-  line-height: 17.63px;
-  text-align: left;
+}
+.menu-container .price {
+  padding-left: 10px;
+  font-size: 15.04px;
+  font-weight: 700;
+  transition: all 450ms ease-in-out;
+}
+.menu-container .card-btn {
+  position: absolute;
+  transition: all 450ms ease-in-out;
+  width: 70px;
+  height: 65px;
+  right: -70px;
+  top: 0;
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-container .card-btn .validation {
+  color: white;
 }
 
 .commander-container {
@@ -1118,6 +1100,7 @@ hr {
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
+  margin-top: 27px;
 }
 
 .loadingscreen {
@@ -1128,7 +1111,7 @@ hr {
   height: 100%;
   width: 100%;
   position: fixed;
-  z-index: 1000;
+  z-index: 999;
   background: white;
   animation: loader 4s ease-in-out forwards;
 }
@@ -1144,34 +1127,26 @@ hr {
 }
 
 @keyframes l19 {
-  90%, 100% {
+  100% {
     background-size: 100% 100%;
   }
 }
 @keyframes loader {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
   25% {
     opacity: 1;
-    width: 100%;
-    height: 100%;
   }
   70% {
     opacity: 1;
-    width: 100%;
-    height: 100%;
   }
   99% {
     opacity: 0;
-    width: 0;
-    height: 0;
   }
   100% {
     z-index: 0;
     opacity: 0;
-    width: 0;
-    height: 0;
   }
 }
 
