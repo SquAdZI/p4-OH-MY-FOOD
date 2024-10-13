@@ -6,7 +6,7 @@
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 999;
+    z-index: 1000;
     background: white;
     animation: loader 4s ease-in-out forwards;
 }
@@ -43,7 +43,7 @@
         opacity: 0;
     }
     100% {
-        z-index: 0;
+        z-index: -10;
         opacity: 0;
     }
 }
